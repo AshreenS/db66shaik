@@ -3,10 +3,13 @@ extends layout
 block content 
   h1= title 
  
-  - let gucciid = toShow._id 
-  - let gucci_type = toShow.Itemname
-  - let gucciquantity = toShow.Quantity
-  - let gucciprize = toShow.price 
+  if (toShow == null)
+      h2 No instance to display
+  else
+      - let gucciid = toShow._id 
+      - let gucci_type = toShow.Itemname
+      - let gucciquantity = toShow.Quantity
+      - let gucciprize = toShow.price 
   div 
     div.row 
       div(class='gucciAttr mr-3') Gucci ID is:  
