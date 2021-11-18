@@ -1,0 +1,22 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  - let gucciid = toShow._id 
+  - let gucci_type = toShow.Itemname
+  - let gucciquantity = toShow.Quantity
+  - let gucciprize = toShow.price 
+  div 
+    div.row 
+      div(class='gucciAttr mr-3') Gucci ID is:  
+      div #{gucciid} 
+    div.row 
+      div(class='gucciAttr mr-3') Gucci Type is: 
+      div #{gucci_type} 
+    div.row 
+      div(class='gucciAttr mr-3') Gucci Size is: 
+      div #{gucciquantity} 
+    div.row 
+      div(class='gucciAttr mr-3') Gucci Cost is: 
+      div #{gucciprize} 

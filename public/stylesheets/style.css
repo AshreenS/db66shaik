@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.gucciAttr { 
+  background-color: rgb(202, 126, 183); 
+  width: 120px; 
+}
