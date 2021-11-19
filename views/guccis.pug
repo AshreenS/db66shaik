@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  - let items = results; 
+  table(class="table table-stripped table-bordered")
+        thead(style="background-color:black;color:white") 
+            tr
+                td Item ID
+                td Item name 
+                td Item Type 
+                td Item Price 
+                td Update
+        tbody 
+            each item in items 
+                - let destination = `dispatch(\"/guccis/update?id=${item._id}\")` 
+                tr
+                    td #{item._id}
+                    td #{item.Itemname}
+                    td #{item.Quantity}
+                    td #{item.price}
+                    td 
+                     button.btn( class="btn-primary ml-1", onclick= destination) Update
+            script. 
+                function dispatch(path){ 
+                    window.location.href=path 
+                } 
