@@ -23,8 +23,7 @@ passport.use(new LocalStrategy(
 
 const connectionString =  process.env.MONGO_CON
 mongoose = require('mongoose');
-mongoose.connect(connectionString,
-{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(connectionString,{useNewUrlParser: true, useUnifiedTopology: true});
 
 
 
