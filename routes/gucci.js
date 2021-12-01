@@ -29,10 +29,10 @@ router.get('/guccis/:id', gucci_controlers.gucci_detail);
 router.get('/detail', gucci_controlers.gucci_view_one_Page);
 
 /* GET create gucci page */ 
-router.get('/create', gucci_controlers.gucci_create_Page); 
+router.get('/create',secured, gucci_controlers.gucci_create_Page); 
 
-/* GET create update page */ 
+/* GET update update page */ 
 router.get('/update',secured, gucci_controlers.gucci_update_Page);
 
-/* GET create Gucci page */ 
-router.get('/delete', gucci_controlers.gucci_delete_Page); 
+/* GET delete Gucci page */ 
+router.get('/delete',secured, gucci_controlers.gucci_delete_Page); 
